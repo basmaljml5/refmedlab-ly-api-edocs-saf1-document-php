@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+<title>المختبر الطبي المرجعي - البطنان</title>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="images/client_logo.png" />
+<Xmeta http-equiv="refresh" content="25; ">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+                        <meta name = "theme-color" content = "#8B0008">
+                        <meta content='#8B0008' name='theme-color'/> 
+                        <meta name = "msapplication-navbutton-color" content = "#8B0008">
+                        <meta content='#8B0008' name='msapplication-navbutton-color'/>
+
+
+<!-- iOS Safari -->
+<meta name = "apple-mobile-web-app-capable" content = "yes">
+<meta name = "apple-mobile-web-app-status-bar-style" content = "black or black-translucent">
+
+<!-- iOS Safari -->
+<meta content='yes' name='apple-mobile-web-app-capable'/>
+<meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'/>
+
+<style>
+/*
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*/
+
+@font-face {
+  font-family: "fwText";
+  src: url("fonts/readex_pro.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fwTextLarge";
+  src: url("fonts/hacen_newspaper.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "barcode Font";
+  src: url("fonts/code128.ttf") format("truetype");
+  }
+
+
+body {
+	font-family: "fwText";
+	font-size: 12px;
+	background-color: #f0f0f0;
+}
+
+/* Make all text bold across the page (applies to all descendants).
+   Using !important to override inline or other font-weight declarations. */
+body, body * {
+    font-weight: 700 !important;
+}
+
+
+
+.topBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #F03025;color: white;
+	
+	
+	
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	width: 100%;
+	z-index: 1600;
+    border: 1px solid black;
+}
+
+
+
+
+.bottomBar {
+	background-color: #F0302588;color: white;
+	
+	
+	
+	margin: 0 20px 0 20px;
+	padding: 0;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+    border: 1px solid black;
+}
+
+#ribbonContnent {
+position :relative;
+display: flex;
+flex-direction: row;
+top: 0;
+left: 0;
+width: 100%;
+height: 80px;
+margin:0;
+padding: 0;
+border: 1px solid yellow;
+box-sizing: border-box;
+}
+
+.ribbonContnentItem	 {
+	flex-grow: 1;
+	margin:0;
+	padding: 0;
+	border: 0px solid gray;
+	box-sizing: border-box;
+	direction: rtl;
+}
+
+.englishTitle {
+	font-family: "Red Rose";
+	xfont-family: "Roboto Condensed", sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ArabicTitle {
+	font-family: "fwTextLarge";
+	xfont-family: "Roboto Condensed", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ArabicTitle2 {
+	font-family: "fwText";
+	xfont-family: "Roboto Condensed", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+}
+
+#fwSideBar {
+	display: none;
+	position: fixed;
+	z-index: 1500;
+	top: 100px;
+	left: 10px;
+	width: 50px;
+	height: 500px;
+	background-color: #F03025;
+	border: 1px solid black;
+	box-sizing: border-box;
+	border-radius: 50px;
+}
+
+#mainContiner {
+display: flex;
+flex-direction: column;
+position: absolute;
+z-index: 1000;
+top: 0;
+left: 0;
+width: 100%; 
+height: 100%;
+margin:0;
+padding: 100px 0 100px 0;
+overflow-y: auto;
+border: 0px solid red;
+box-sizing: border-box;
+align-items: center;
+}
+
+.containerItem {
+	xbackground-color: #ffffff;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: row;
+	justify-content: center;
+	border: 0px solid green;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 360px;
+	margin: 0px;
+	padding: 10px 15px;
+	direction: rtl;
+	
+	
+}
+
+.rowItem {
+	background-color: white;
+	border: 0px solid #000000;
+	box-sizing: border-box;
+	 display: flex;
+	 flex-grow: 1;
+	 flex-direction: column;
+	  margin: 0;
+	  padding: 20px 10px;
+	}
+
+	
+
+.rowItemX {
+	border:1px solid #3f16d2;
+	box-sizing: border-box;
+	display: flex; flex-grow: 1;
+	flex-direction: column;
+	height:105px;
+}
+
+.contentRow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0px solid #01e1ff;
+	box-sizing: border-box;
+	xbackground-color: white;
+	flex-grow: 1;
+	margin: 0px;
+	padding: 0px;
+	xheight:35px;
+}
+
+
+.contentRowNegtv {
+	border: 4px solid #43a047;
+	border-radius:5px;
+	box-sizing: border-box;
+	background-color: white;
+	margin: 5px auto;
+	text-align:center;
+	padding:5px; color: green;
+	font-size:18px;
+	font-weight: bold;
+	min-width: 150px;
+	max-width: 150px;
+}
+
+
+.contentRowPostv {
+	border: 4px solid #ff2fa5;
+	border-radius:5px;
+	box-sizing: border-box;
+	background-color: white;
+	margin: 5px auto;
+	text-align:center;
+	padding:5px;
+	color: #ff2fa5;
+	font-size:18px;
+	font-weight: bold;
+	max-width: 120px;
+}
+
+
+.contentRowNegtvB {
+z-index: 1700;
+border: 2px solid #43a047;
+border-radius:5px;
+box-sizing: border-box;
+background-color: white;
+margin: 5px 5px;
+text-align:center;
+padding:5px;
+color: green;
+font-size:13px;
+font-weight: bold;
+}
+
+.contentRowPostvB {
+	border: 2px solid #ff2fa5;
+	border-radius:5px;
+	box-sizing: border-box;
+	background-color: white;
+	margin: 5px 5px;
+	text-align:center;
+	padding:5px;
+	color: #ff2fa5;
+	font-size:13px;
+	font-weight: bold;
+}
+
+
+.contentCaption {
+	border-bottom: 1px dotted #3e3e3e;
+	box-sizing: border-box;
+	xbackground-color: white;
+	xdisplay: flex; flex-grow: 1;
+	text-align: center;
+	height: 15px;
+	font-size: 14px;
+}
+
+.arCaption {
+border: 0px solid #eeff01;
+box-sizing: border-box;
+xbackground-color: white;
+xdisplay: flex;
+flex-grow: 0;
+width:70px;
+height: 28px;
+white-space: nowrap;
+}
+
+.arCaption2 {
+	border: 0px solid #eeff01;
+	box-sizing: border-box;
+	xbackground-color: red;
+	xdisplay: flex;
+	flex-grow: 0;
+	width:78px;
+	height: 28px;
+	white-space: nowrap;
+}
+
+.enCaption {
+	border: 0px solid #ff3366;
+	box-sizing: border-box;
+	xbackground-color: white;
+	xdisplay: flex;
+	flex-grow: 0;
+	width:60px;
+	direction:ltr;
+}
+
+.enCaption2 {
+	border: 0px solid #eeff01;
+	box-sizing: border-box;
+	xbackground-color: green;
+	xdisplay: flex;
+	flex-grow: 0;
+	width:98px;
+	direction:ltr;
+}
+
+.barcode {
+	font-family: "barcode Font";
+	font-size:36px;
+	line-height:15px;
+	overflow-y: hidden;
+}
+
+.barcodeDigits {
+
+}
+
+.certificateRow	{
+	display: flex;
+	color: black;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+	margin: 0 0 10px 0;
+	padding:5px;
+	}
+		
+	.rLshapeTitle {
+			border: 1px solid #444444;
+			xborder-bottom: 1px solid #444444;
+			padding-right: 5px;
+			background-color: #e0e0e0;
+			margin-bottom: 5px;
+			}
+
+			.rLshapeTitle * {
+			background-color: transparent !important;
+			}
+
+
+</style>
+
+</head>
+<body>
+
+	
+<div id="bottomBar" style="	z-index: 1700; position: fixed; bottom: 50px; left: 0; border: 0; width: 100%; margin: 0; padding: 0;">
+    <div id="" class="bottomBar" style="border: 2px solid #8B0008;  border-radius: 20px; height: 40px; backdrop-filter: blur(5px); display: flex; align-items: center; justify-content: center; direction: rtl;">
+        
+           متبقي: 5 أشهر و29 يومًا.    </div>
+</div>
+
+
+<div id="topBar" class="topBar" style="border: 0px solid red;">
+		<div id="ribbonContnent" style="line-height: 20px;border: 0px solid red;">
+		<div class="ribbonContnentItem" style="text-align: center; padding-top: 10px;">
+			<span class="ArabicTitle" style="font-size: 28px;border: 0px solid red;">وزارة الــصحـــة - لــيبيــا</span><br>
+			<span class="ArabicTitle2" style="font-size: 15px;border: 0px solid red;">
+				المختبـــــــــــــــــــر الطبـــــــــــــــــــي المرجعـــــــــــــــــــي 
+				 الــبطنــان</span>
+		</div>
+
+			<div style="width:100px; flex-grow: 0; margin: 0; pading: 0;" class="ribbonContnentItem">
+				<img src="images/client_logo.png" alt="Logo" style="width: 80px; height: 80px; background-color: white; border: 3px solid #8B0008; border-radius: 100px; padding: 5px; margin: 5px 10px 0 0;"/>
+			</div>
+
+		</div>
+</div>
+
+
+<div id="fwSideBar" style="">&nbsp; </div>
+
+<div id="mainContiner" class="mainContiner">
+
+	<div id="rw1" class="containerItem" style="flex-direction: row; direction: ltr; border: 0px solid black; position: relative; padding: 15px; margin: -10px 0 0 0;">
+	<div class="containerItem" style="flex-direction: row; direction: ltr; border: 1px solid #a0a0a0; border-radius: 10px; position: relative; padding: 10px; margin:0;">
+	
+				
+
+		
+		<DIV id="fitStamp" class="contentRowNegtvB" style="border-width: 3px; position: absolute; left: 120px; top: 80px; margin: 0; padding: 0; border: 0px solid red; background-color: transparent; xdisplay: none;">
+		<img src="images/stamp_fit.png" style="margin: 0; padding: 0; border: 0px solid red; width: 140px;">
+		</div>
+		
+		
+		<div class="contentRow" style="flex-direction: column; text-align: center; flex-grow:0; width: 300px; border: 0px solid black; padding: 0px 0 0 0;">
+    <div style="font-family: 'Arial', sans-serif; font-size: 28px; line-height: 1.2; border: 0px solid red; font-weight: bold; color: #000;">
+        <div>بطـاقة</div>
+        <div>صحيــــة</div>
+    </div>
+    <div style="font-family: 'Arial', sans-serif; font-size: 14px; border: 0px solid red; margin-top: 5px; color: #000; font-weight: bold;">MEDICAL CERTIFICATE</div>
+	<div style="font-family: 'Libre Barcode 128', cursive; font-size: 40px; height: 50px; line-height: 50px; border: 0px solid red; margin: 5px 15px 0 15px; color: #000; font-weight: normal !important;">162831/9961</div>
+	<div style="font-family: 'Arial', sans-serif; font-size: 12px; border: 0px solid red; letter-spacing: 3px; margin-top: 2px; color: #000; font-weight: normal !important;">162831/9961</div>
+    <div style="font-family: 'Arial', sans-serif; font-weight: bold; font-size:13px; border: 0px solid red; letter-spacing: 8px; margin-top: 5px; color: #000;">FOR EXPATS</div>
+</div>
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap" rel="stylesheet">
+	
+
+		<div class="contentRow" style="flex-direction: column; text-align: center; width: 260px; border:0; flex-grow: 0; align-items: flex-end;">
+				<img id="medCert_Photo" src="images/client_logo (1).png" style="border:3px solid #8B0008; xheight: 120px; border-radius: 15px 0; margin: 0px 0 0 0; padding:0; width:120px; height:154px;">
+		</div>
+
+	
+	</div>
+	</div>
+
+	<div id="rw2" class="containerItem">
+			<div class="rowItem" style="background-color: #e0e0e0; border-radius: 20px 0; border:1px solid #a0a0a0; xmax-width: 280px;">
+				<div class="contentRow"><div class="arCaption"><strong>الإســــــــــــم :</strong></div><div id="medCert_Name" class="contentCaption" style="xborder:0px solid black; padding: 0; direction:rtl;">خالد البدرى على احمد </div><div class="enCaption">Name :</div></div>
+				<div class="contentRow"><div class="arCaption"><strong>الجنـــــــــس :</strong></div><div id="medCert_Gender" class="contentCaption">ذكر</div><div class="enCaption">SEX :</div></div>
+				<div class="contentRow"><div class="arCaption"><strong>نوع الهوية :</strong></div><div id="medCert_ID_Type" class="contentCaption">بطاقة</div><div class="enCaption">ID TYPE :</div></div>
+				<div class="contentRow"><div class="arCaption"><strong>رقم الهوية :</strong></div><div id="medCert_ID_No" class="contentCaption">30208072602336</div><div class="enCaption">ID NO :</div></div>
+			</div>
+	</div>
+
+	
+	<div id="rw2" class="containerItem">
+			<div class="rowItem" style="border-radius: 20px 0; border:1px solid #a0a0a0; xmax-width: 280px;">
+				<div class="contentRow"><div class="arCaption2">الجنسيـــــــــة :</div><div id="medCert_Nationality" class="contentCaption">مصري</div><div class="enCaption2">NATIONALITY :</div></div>
+				<div class="contentRow"><div class="arCaption2">تاريخ الميــــلاد :</div><div id="medCert_Age" class="contentCaption">
+                2002/08/07                </div><div class="enCaption2">D.O.B :</div></div><div class="contentRow"><div class="arCaption2">عنوان السكن :</div><div id="medCert_Address" class="contentCaption">المصطبة</div><div class="enCaption2">ADDRESS :</div></div>
+				<div class="contentRow"><div class="arCaption2">مكان العمــــــل :</div><div id="medCert_Working_At" class="contentCaption">المصطبة</div><div class="enCaption2" style="width:110px;">PLACE OF WORK :</div></div>
+				<div class="contentRow"><div class="arCaption2">المهنـــــــة :</div><div id="medCert_Occupation" class="contentCaption">عامل</div><div class="enCaption2">PROFESSION :</div></div>
+			</div>
+	</div>
+
+		<div id="rw4" class="containerItem">
+			<div class="rowItem" style="xborder:0;">
+				<div class="contentRow"><div class="arCaption2" style="width:110px;">بطاقة صحية رقم :</div><div id="medCert_No" class="contentCaption" style="font-weight: bold;">86538</div><div class="enCaption2">CERT. NO. :</div></div>
+				<div class="contentRow"><div class="arCaption2" style="width:110px;">تاريخ الاصـــــــــدار :</div><div id="medCert_IssueDate" class="contentCaption">2026-07-26</div><div class="enCaption2">ISSUE DATE :</div></div>
+				<div class="contentRow"><div class="arCaption2" style="width:110px;">تاريخ الانتهــــــاء :</div><div id="medCert_Expiry_Date" class="contentCaption">2027-01-26</div><div class="enCaption2">EXPIRY DATE :</div></div>
+				<div class="contentRow"><div class="arCaption2" style="width:110px;">بطاقـــــــــة الدرن :</div><div id="medCert_TBCardNo" class="contentCaption">&nbsp; </div><div class="enCaption2">TB CARD ID :</div></div>
+				<div class="contentRow"><div class="arCaption2" style="width:110px;">الوضـــع القانونــــي :</div><div id="imgStatus" class="contentCaption">&nbsp; </div><div class="enCaption2">IMMIGRATION:</div></div>
+			</div>
+	</div>
+	
+
+	
+	<div id="rw6" class="containerItem" style="flex-direction: column; height: 650px; margin-top: 40px; ">
+
+			<div class="rowItem" style="xborder:0; margin-bottom: 25px; border-radius: 20px 0;  border:0px solid #a0a0a0; xpadding-top: 0;">
+				<div class="contentRow" style="margin-bottom: 30px; justify-content: start;"><div class="arCaption2" style="flex-grow: 1; xwidth:115px;">إلتهاب الكبد البائي</div><div class="enCaption2" style="flex-grow: 1; xwidth:120px;">Hbs Ag</div></div>
+				<div class="contentRow" style="margin-bottom: 30px;"><div id="medCert_No" class="contentCaption" style="border: 0px; height: 40px;"><img src="images/correct.svg" style="width: 60px; margin: 0 auto;"></div></div>
+				<div class="contentRowNegtv" style="min-width: 190px;">NEGETIVE</div>			</div>
+
+			<div class="rowItem" style="xborder:0; margin-bottom: 25px; border-radius: 20px 0;  border:0px solid #a0a0a0;">
+				<div class="contentRow" style="margin-bottom: 30px;"><div class="arCaption2" style="flex-grow: 1; xwidth:115px;">التهاب الكبد الجيمي</div><div class="enCaption2" style="flex-grow: 1;">Anti-HCV</div></div>
+				<div class="contentRow" style="margin-bottom: 30px;"><div id="medCert_No" class="contentCaption" style="border: 0px; height: 40px;"><img src="images/correct.svg" style="width: 60px; margin: 0 auto;"></div></div>
+				<div class="contentRowNegtv" style="min-width: 190px;">NEGETIVE</div>			</div>
+
+			<div class="rowItem" style="xborder:0; border-radius: 20px 0;  border:0px solid #a0a0a0;">
+				<div class="contentRow" style="margin-bottom: 30px;"><div class="arCaption2" style="flex-grow: 1; xwidth:115px; white-space: nowrap;">نقص المناعة المكتسبة</div><div class="enCaption2" style="flex-grow: 1;">HIV</div></div>
+				<div class="contentRow" style="margin-bottom: 30px;"><div id="medCert_No" class="contentCaption" style="border: 0px; height: 40px;"><img src="images/correct.svg" style="width: 60px; margin: 0 auto;"></div></div>
+				<div class="contentRowNegtv" style="min-width: 190px;">NEGETIVE</div>			</div>
+
+
+	</div>
+	
+
+
+	
+</div>
+
+<script>
+// تاريخ الانتهاء (يمكنك تعديله حسب الحاجة)
+const expiryDate = new Date("2027-01-26");
+
+function updateRemaining() {
+    const now = new Date();
+    let diff = expiryDate - now;
+    if (diff < 0) diff = 0;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const months = Math.floor(days / 30);
+    const remDays = days % 30;
+    // صياغة النص
+    const text = `متبقي: ${months} شهر${months !== 1 ? '' : ''} و${remDays} يومًا.`;
+    // ضع النص في العنصر المناسب
+    var el = document.querySelector("#bottomBar .bottomBar");
+    if (el) el.innerText = text;
+}
+updateRemaining();
+setInterval(updateRemaining, 60 * 60 * 1000); // يحدث كل ساعة
+</script>
+
+</body>
+</html>
